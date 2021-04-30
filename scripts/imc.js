@@ -9,10 +9,12 @@ let reset = document.getElementById("reset");
 // Focus par defaut dans le premier champ "Taille"
 taille.focus();
 document.getElementById("imcresult").style.display = 'none';
+document.getElementById("h1result").style.display = 'none';
 
 addT.addEventListener("click", () => {
     taille = document.getElementById("taille").value;
     document.getElementById("imcresult").style.display = 'block';
+    document.getElementById("h1result").style.display = 'none';
     document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm";
 
     poids.focus();
