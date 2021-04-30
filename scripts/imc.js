@@ -8,13 +8,13 @@ let reset = document.getElementById("reset");
 
 // Focus par defaut dans le premier champ "Taille"
 taille.focus();
-document.getElementById("imcresult").style.display = 'none';
-document.getElementById("h1result").style.display = 'none';
+document.getElementById("imcresult").style.display = "none";
+document.getElementById("h1result").style.display = "none";
 
 addT.addEventListener("click", () => {
     taille = document.getElementById("taille").value;
-    document.getElementById("imcresult").style.display = 'block';
-    document.getElementById("h1result").style.display = 'none';
+    document.getElementById("imcresult").style.display = "block";
+    document.getElementById("h1result").style.display = "none";
     document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm";
 
     poids.focus();
@@ -27,20 +27,19 @@ addP.addEventListener("click", () => {
         if (!isNaN(parseInt(poids)) && poids > 20 && poids < 500) {
             imc = (poids * 10000) / (taille * taille);
             imc = Math.round(imc);
-            document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm" + "<br>" + "Votre poids est de " + poids + " kg" + "<br>" + "Votre IMC est donc de " + "<div class=\"numberCircle\">" + imc + "</div>";
-
+            document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm" + "<br>" + "Votre poids est de " + poids + " kg" + "<br>" + "Votre IMC est donc de " + '<div class="numberCircle">' + imc + "</div>";
         }
     }
-    document.getElementById("imccalcul").style.display = 'none';
-    document.getElementById("imcresult").style.display = 'block';
-    document.getElementById("h1result").style.display = 'block';
-    document.getElementById("taille").value = '';
-    document.getElementById("poids").value = '';
+    document.getElementById("imccalcul").style.display = "none";
+    document.getElementById("imcresult").style.display = "block";
+    document.getElementById("h1result").style.display = "block";
+    document.getElementById("taille").value = "";
+    document.getElementById("poids").value = "";
 });
 
 reset.addEventListener("click", () => {
     document.getElementById("result").innerHTML = "";
-    document.getElementById("imcresult").style.display = 'none';
-    document.getElementById("imccalcul").style.display = 'block';
+    document.getElementById("imcresult").style.display = "none";
+    document.getElementById("imccalcul").style.display = "block";
     taille.focus();
 });
