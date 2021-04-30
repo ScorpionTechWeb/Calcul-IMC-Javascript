@@ -25,7 +25,7 @@ addP.addEventListener("click", () => {
         if (!isNaN(parseInt(poids)) && poids > 20 && poids < 500) {
             imc = (poids * 10000) / (taille * taille);
             imc = Math.round(imc);
-            document.getElementById("result").innerHTML = "Votre poids est " + poids + " kg" + "<br>" + "Votre taille est de " + taille + " m" + "<br>" + "Votre IMC est donc de " + "<div class=\"numberCircle\">" + imc + "</div>";
+            document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm" + "<br>" + "Votre poids est de " + poids + " kg" + "<br>" + "Votre IMC est donc de " + "<div class=\"numberCircle\">" + imc + "</div>";
 
         }
     }
