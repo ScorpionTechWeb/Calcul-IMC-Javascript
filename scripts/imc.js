@@ -31,6 +31,7 @@ addP.addEventListener("click", () => {
     }
     document.getElementById("imccalcul").style.display = 'none';
     document.getElementById("imcresult").style.display = 'block';
+    document.getElementById("h1result").style.display = 'block';
     document.getElementById("taille").value = '';
     document.getElementById("poids").value = '';
 });
