@@ -13,7 +13,7 @@ document.getElementById("imcresult").style.display = 'none';
 addT.addEventListener("click", () => {
     taille = document.getElementById("taille").value;
     document.getElementById("imcresult").style.display = 'block';
-    document.getElementById("result").innerHTML = "Votre taille est " + taille;
+    document.getElementById("result").innerHTML = "Votre taille est " + taille + " cm";
 
     poids.focus();
 });
@@ -25,8 +25,7 @@ addP.addEventListener("click", () => {
         if (!isNaN(parseInt(poids)) && poids > 20 && poids < 500) {
             imc = (poids * 10000) / (taille * taille);
             imc = Math.round(imc);
-            console.log(imc);
-            document.getElementById("result").innerHTML = "Votre poids est " + poids + " kg" + "<br>" + "Votre taille est de " + taille + " m" + "<br>" + "Votre IMC est donc de " + imc;
+            document.getElementById("result").innerHTML = "Votre poids est " + poids + " kg" + "<br>" + "Votre taille est de " + taille + " m" + "<br>" + "Votre IMC est donc de " + "<div class=\"numberCircle\">" + imc + "</div>";
 
         }
     }
