@@ -26,7 +26,15 @@
 }
 div#h1result {
     font: 32px Arial, sans-serif;
+    margin-bottom: 50px;
 }
 .p-5 {
     padding: 1rem !important;
+}
+.btnclass {
+    margin-top: 50px;
+}
+label.labelinput {
+    display: block;
+    margin-bottom: 20px;
 }
