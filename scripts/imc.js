@@ -10,6 +10,23 @@ let reset = document.getElementById("reset");
 taille.focus();
 document.getElementById("imcresult").style.display = "none";
 document.getElementById("h1result").style.display = "none";
+reset.hidden = true;
+
+taille.addEventListener("keyup", () => {
+    if (taille.value !== "") {
+        addT.disabled = false;
+    } else {
+        addT.disabled = true;
+    }
+});
+
+poids.addEventListener("keyup", () => {
+    if (poids.value !== "") {
+        addP.disabled = false;
+    } else {
+        addP.disabled = true;
+    }
+});
 
 addT.addEventListener("click", () => {
     taille = document.getElementById("taille").value;
@@ -35,11 +52,12 @@ addP.addEventListener("click", () => {
     document.getElementById("h1result").style.display = "block";
     document.getElementById("taille").value = "";
     document.getElementById("poids").value = "";
+    reset.hidden = false;
+    reset.disabled = false;
 });
 
 reset.addEventListener("click", () => {
     document.getElementById("result").innerHTML = "";
     document.getElementById("imcresult").style.display = "none";
     document.getElementById("imccalcul").style.display = "block";
-    taille.focus();
 });
